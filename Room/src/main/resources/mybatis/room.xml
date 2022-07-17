@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="room">
+	<select id="total" resultType="Integer">
+		SELECT COUNT(*) FROM room
+	</select>
+	
+	<select id="list" resultType="Room">
+		SELECT * FROM room 
+		LIMIT #{offset}, #{perPage}
+	</select>		
+	
+	<insert id="add" useGeneratedKeys="true" keyProperty="roomId">
+	INSERT INTO room
+	(REGISTER_INFO, ADDRESS1, ADDRESS2, DEAL, PRICE, MONTH_PRICE, COST, COST_INFO, MOVE_DATE, WHOLE_CLASS, MY_CLASS, FORM, PARK, CHOICE_OPTION, BOARD_CN, ZIP_CODE)
+		VALUES (#{registerInfo}, #{address1}, #{address2}, #{deal}, #{price}, #{monthPrice}, #{cost}, #{costInfo}, #{moveDate}, #{wholeClass}, #{myClass}, #{form}, #{park}, #{choiceOption}, #{boardCn}, #{zipCode})
+	</insert>
+	
+	<update id="update">
+		UPDATE room
+		SET register_info=#{registerInfo}, address1=#{address1}, address2=#{address2}, deal=#{deal}, price=#{price}, month_price=#{monthPrice}, cost=#{cost}, cost_info=#{costInfo}, move_date=#{moveDate}, whole_class=#{wholeClass}, address2=#{address2}, my_class=#{myClass}, form=#{form}, park=#{park}, choice_option=#{choiceOption}, board_cn=#{boardCn}, zip_code=#{zipCode}
+		WHERE ROOM_ID=#{roomId}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM room
+		WHERE ROOM_ID=#{roomId}
+	</delete>
+	
+	<select id="item" resultType="Room">
+		SELECT * FROM room
+		WHERE ROOM_ID=#{roomId}
+	</select>
+</mapper>

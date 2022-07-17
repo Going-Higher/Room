@@ -1,0 +1,10 @@
+/* filter */
+.filter {
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+}
+.filter label {
+    padding: 0 20px;
+}
+
