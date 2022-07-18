@@ -31,5 +31,6 @@
 	<select id="item" resultType="Room">
 		SELECT * FROM room
 		WHERE ROOM_ID=#{roomId}
+		ORDER BY ROOM_ID DESC
 	</select>
 </mapper>

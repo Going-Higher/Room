@@ -26,6 +26,7 @@ final String path = "room/";
 	
 	@RequestMapping("/list")
 	String list(Model model, Pager pager) {
+		pager.setPerPage(12);
 		List<Room> list = service.list(pager);
 		
 		model.addAttribute("list", list);
@@ -70,8 +71,8 @@ final String path = "room/";
 		
 		MultipartFile uploadFile = item.getAtchFileId();
 		try {
-			// String filename = uploadFile.getOriginalFilename();
-			// String ext = filename.substring(filename.lastIndexOf(".") - 1, filename.length());
+			//String filename = uploadFile.getOriginalFilename();
+			//String ext = filename.substring(filename.lastIndexOf(".") - 1, filename.length());
 			String ext = "jpg";
 			uploadFile.transferTo(new File("d:/upload/room_" + item.getRoomId() + "." + ext));
 			
