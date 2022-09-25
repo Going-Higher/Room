@@ -54,7 +54,7 @@
 }
 .list img{
     width: 240px;
-    height: auto;
+    /* height: auto; */
     /* margin-left: 5px; */
     /* padding: 2rem 0;
     transition: .5s; */

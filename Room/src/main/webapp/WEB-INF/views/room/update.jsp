@@ -37,7 +37,7 @@
 				<ul class="header_menu">
 					<li><a href="/kopo#about">소개</a></li>
 					<li><a href="${pageContext.request.contextPath}/room/list">매물찾기</a></li>
-					<li><a href="#">게시판</a></li>
+					<%-- <li><a href="#">게시판</a></li>
 					<li><c:choose>
 							<c:when test="${empty USER_INFO.id}">
 								<a href="/login/egovLoginUsr.do" class="login">로그인</a>
@@ -48,7 +48,7 @@
 								</a>
 							</c:otherwise>
 						</c:choose></li>
-				</ul>
+				</ul> --%>
 			</div>
 			<div class="menu-toggle-btn">
 				<img src='<c:url value="/resources/images/menu_bar.png"/>'>

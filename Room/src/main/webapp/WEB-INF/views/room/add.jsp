@@ -37,7 +37,7 @@
 				<ul class="header_menu">
 					<li><a href="/kopo#about">소개</a></li>
 					<li><a href="room/list">매물찾기</a></li>
-					<li><a href="board/list">게시판</a></li>
+					<%-- <li><a href="board/list">게시판</a></li>
 					<li><c:choose>
 							<c:when test="${empty USER_INFO.id}">
 								<a href="/login/egovLoginUsr.do" class="login">로그인</a>
@@ -47,7 +47,7 @@
 										value="${USER_INFO.name}" />님 로그아웃
 								</a>
 							</c:otherwise>
-						</c:choose></li>
+						</c:choose></li> --%>
 				</ul>
 			</div>
 			<div class="menu-toggle-btn">

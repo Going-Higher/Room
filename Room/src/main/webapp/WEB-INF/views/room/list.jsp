@@ -39,8 +39,8 @@
 				<ul class="header_menu">
 					<li><a href="/kopo#about">소개</a></li>
 					<li><a href="${pageContext.request.contextPath}/room/list">매물찾기</a></li>
-					<li><a href="#">게시판</a></li>
-					<li><c:choose>
+					<!-- <li><a href="#">게시판</a></li> -->
+					<%-- <li><c:choose>
 							<c:when test="${empty USER_INFO.id}">
 								<a href="/login/egovLoginUsr.do" class="login">로그인</a>
 							</c:when>
@@ -49,7 +49,7 @@
 										value="${USER_INFO.name}" />님 로그아웃
 								</a>
 							</c:otherwise>
-						</c:choose></li>
+						</c:choose></li> --%>
 				</ul>
 			</div>
 			<div class="menu-toggle-btn">
@@ -94,7 +94,7 @@
 
 	<div class="title">매물목록</div>
 
-	<div class="filter">
+	<<!-- div class="filter">
 		<select>
 			<option>계약형태</option>
 			<option>월세</option>
@@ -106,7 +106,7 @@
 		<input type="range" min="1" max="10" value="1">원
 		<button>초기화</button>
 		<button>적용하기</button>
-	</div>
+	</div> -->
 
 	<section class="main bd-grid">		
 		<div class="list_precis">
